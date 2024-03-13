@@ -20,4 +20,13 @@ buildGo121Module rec {
   ldflags = [
     "-X github.com/pterodactyl/wings/system.Version=${version}"
   ];
+
+  meta = with lib; {
+    description = " The server control plane for Pterodactyl Panel. Written from the ground-up with security, speed, and stability in mind.";
+    homepage = "https://github.com/pterodactyl/wings";
+    license = licenses.mit;
+    mainProgram = "wings";
+    changelog = "https://github.com/pterodactyl/wings/releases/tag/v${version}";
+    platforms = platforms.linux;
+  };
 }
